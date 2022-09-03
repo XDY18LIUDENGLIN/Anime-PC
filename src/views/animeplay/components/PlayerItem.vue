@@ -55,7 +55,7 @@ onMounted(() => {
   });
   dp.value.on('error', e => {
     console.log(e);
-    // dp.value.pause();
+    dp.value.pause();
     dp.value.notice('视频加载失败', 2000);
   });
   dp.value.container.addEventListener('mousemove', () => {
