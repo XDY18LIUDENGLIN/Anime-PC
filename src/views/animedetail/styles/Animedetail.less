@@ -1,0 +1,48 @@
+@media screen and(min-width:@mobile-device) {
+    .big-container {
+        padding: 0.3rem;
+        margin-top: @top-nav-bar-height;
+        color: @textColor;
+        .font-normal();
+        
+        .content{
+            .flex(column);
+            margin-top: @margin-general;
+            .left-content{
+                width: 100%;
+                background-color: @bgColor;
+                .border-normal();
+            }
+            .right-content{
+                flex: 1;
+                width: 100%;
+            }
+            .empty{
+                background-color: @bgColor;
+                .border-normal();
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+@media screen and(min-width:@smallpc-device) {
+    .big-container {
+        margin-top: @margin-general;
+        .content{
+            flex-direction: row;
+            justify-content: space-between;
+            .left-content{
+                width: 75%;
+            }
+            .right-content{
+                max-width: 40rem;
+                flex: 1;
+                width: unset;
+            }
+        }
+    }
+
+}

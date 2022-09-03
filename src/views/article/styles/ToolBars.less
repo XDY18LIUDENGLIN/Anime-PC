@@ -1,0 +1,56 @@
+@media screen and(min-width:@mobile-device) {
+    .toolbars {
+        position: fixed;
+        bottom: 20px;
+        left: 3%;
+        z-index: 10;
+        color: @textColor;
+        ul {
+            display: flex;
+            flex-direction: row;
+            li {
+                opacity: 0.5;
+                .border-normal();
+                .ball(4.5rem, @bgColor);
+                .flexbox(row);
+                .shadow(3px,5px);
+                cursor: pointer;
+                margin: 5px;
+                transition: all 0.6s ease;
+                &:active {
+                    background-color: @activeColor;
+                    color: @hoverTextColor;
+                    opacity: 1;
+                }
+                &:hover {
+                    background-color: @activeColor;
+                    color: @hoverTextColor;
+                    opacity: 1;
+                }
+            }
+            .active {
+                background-color: @activeColor;
+                color: @hoverTextColor;
+                .shadow(3px,5px);
+            }
+        }
+    }
+}
+@media screen and (min-width:992px) {
+    .toolbars{
+        top: 20px;
+        left: 7%;
+        ul{
+            flex-direction: column;
+            li{
+                opacity: 1;
+            }
+        }
+    }
+}
+@media screen and (min-width:1440px) {
+    .toolbars{
+        top: 20px;
+        left: 16%;
+    }
+}

@@ -1,0 +1,133 @@
+@import url(@/assets/styles/anime/anime.less);
+
+@media screen and(min-width:@mobile-device) {
+    .out {
+        .ball(6rem, @bgColor);
+        .flexbox();
+        .shadow();
+        position: fixed;
+        right: 20px;
+        bottom: 6rem;
+        z-index: 3;
+        font-size: @big-text;
+        color: @textColor;
+        .theme-global {
+            .border-normal();
+            .ball(6rem, @bgColor);
+            .flexbox();
+            transition: all 0.5s ease;
+            cursor: pointer;
+            &:hover,
+            &.active {
+                transform: rotateZ(0deg);
+                color: @hoverTextColor;
+                background-color: @activeColor;
+                animation: rotation-loop infinite 2s linear both;
+            }
+        }
+    }
+
+    .mini-setting {
+        position: fixed;
+        .border-normal();
+        .shadow();
+        .font-normal();
+        bottom: 13rem;
+        right: 25px;
+        width: 85%;
+        height: 50vh;
+        z-index: 100;
+        background-color: @bgColor;
+        padding: @padding-general;
+        color: @textColor;
+        .tip {
+            font-size: 0.8rem;
+            color: @tipTextColor;
+        }
+        .close{
+            .ball(3rem,@themeColor);
+            .shadow();
+            .flexbox();
+            color: @hoverTextColor;
+            position: absolute;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 1;
+            top: 5px;
+            right: 5px;
+        }
+        .title {
+            font-size: 1.5rem;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-direction: row;
+
+            span {
+                font-size: 1.3rem;
+                color: @tipTextColor;
+            }
+
+            .right {
+                display: flex;
+                font-size: 1.3rem;
+                color: @linkColor;
+                align-items: flex-end;
+
+                p {
+                    cursor: pointer;
+                    margin: 0 @margin-general;
+                }
+            }
+            
+        }
+
+        .pannel {
+            display: flex;
+            flex-direction: column;
+
+            .form-item {
+                display: flex;
+                margin: 2px 0;
+                justify-content: space-between;
+
+                .label {
+                    width: 20rem;
+                }
+
+                .background {
+                    flex: 1;
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:@pad-device) {
+    .out{
+        .ball(4rem, @bgColor);
+        bottom: 6rem;
+        .theme-global{
+            .ball(4rem, @bgColor);
+        }
+    }
+    .mini-setting{
+        width: 60%;
+        bottom: 11rem;
+    }
+    
+}
+
+@media screen and (min-width:@smallpc-device) {
+    .out{
+        .theme-global{
+            bottom: 4rem;
+        }
+    }
+    .mini-setting {
+        width: 600px;
+        height: 500px;
+    }
+}

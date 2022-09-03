@@ -1,0 +1,24 @@
+@media screen and(min-width:@mobile-device) {
+    .tab{
+        padding: @padding-general;
+        background-color: @bgColor;
+        .operate{
+            .font-normal();
+            width: 1rem;
+            padding: 2rem;
+            .flexbox();
+            .border-normal();
+            background-color: @linkColor;
+            color: @hoverTextColor;
+            margin: @margin-general;
+            border-radius: @border-radius;
+            transition: all ease 0.3s;
+            .cusor-pointer();
+            .shadow();
+            &:hover{
+                transform: translateY(-20px);
+                background-color: @themeColor;
+            }
+        }
+    }
+}

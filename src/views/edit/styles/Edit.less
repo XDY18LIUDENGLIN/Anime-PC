@@ -1,0 +1,82 @@
+@media screen and (min-width:@mobile-device) {
+    .edit {
+        display: flex;
+        margin-top: @top-nav-bar-height;
+        flex-direction: column;
+        .font-normal();
+        .top {
+            margin: @margin-general 0;
+            padding: @padding-general;
+            background-color: @bgColor;
+            .shadow(0px, 5px);
+            border-radius: 30px;
+            border: @border-line @textColor solid;
+            .upload{
+                width: 100%;
+                height: 300px;
+            }
+            .title {
+                .textShadow(1px,5px,rgba(255, 255, 255, 0.452));
+                background-color: rgba(255, 255, 255, 0.014);
+                height: 48px;
+                border: none;
+                outline: none;
+                width: 100%;
+                font-size: 2.6rem;
+                margin: @margin-general 0;
+            }
+            .summary {
+                margin: @margin-general 0;
+                :deep(.el-textarea) {
+                    .el-textarea__inner {
+                        min-height: 60px !important;
+                    }
+                }
+            }
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            .tags{
+                margin: @margin-general 0;
+            }
+            .pannel{
+                display: flex;
+                .label{
+                    width: 100px;
+                }
+            }
+            .tag{
+                width:100%;
+            }
+            .publish{
+                width: 100%;
+                .el-button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:@smallpc-device) {
+    .edit {
+        margin-top: 0;
+        .tagandpublish {
+            background-color: @bgColor;
+        }
+        .bottom {
+            flex-direction: row;
+            align-items: flex-end;
+            .publish{
+                width: unset;
+            }
+            .tag{
+                width: 60%;
+            }
+        }
+    }
+}
