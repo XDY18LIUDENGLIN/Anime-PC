@@ -4,7 +4,7 @@ import request from '@/utils/request';
 export const getYhdmAnimeSearchInfo = (keywords: string) => {
   return request({
     method: 'get',
-    url: '/api/yhdm/getsearchinfo',
+    url: '/api/getSearchInfo',
     params: { keywords: keywords }
   });
 };
@@ -12,7 +12,7 @@ export const getYhdmAnimeSearchInfo = (keywords: string) => {
 export const getYhdmAnimeVideoInfo = (url: string) => {
   return request({
     method: 'get',
-    url: '/api/yhdm/getvideourl',
+    url: '/api/getVideoUrl',
     params: { url: url }
   });
 };

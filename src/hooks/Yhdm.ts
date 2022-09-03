@@ -47,7 +47,7 @@ export const useYhdm = (animeDetail: Bangumi.AnimeDeatilItem | null) => {
       }
       try {
         const { data } = await getYhdmAnimeSearchInfo(keywords);
-        return data.data.results;
+        return data.data;
       } catch (error) {
         console.log(error);
         return null;
@@ -107,9 +107,11 @@ export const useYhdm = (animeDetail: Bangumi.AnimeDeatilItem | null) => {
       }
     });
   }
+
   const openUrl = (url: string) => {
     window.open(url, '_blank');
   };
+
   const cnSite = computed(() => {
     return sites.filter((item: any) => {
       if (item && item.lang) {
@@ -128,6 +130,7 @@ export const useYhdm = (animeDetail: Bangumi.AnimeDeatilItem | null) => {
       }
     });
   });
+
   const twHkSite = computed(() => {
     return sites.filter((item: any) => {
       if (item.lang && item.lang.length < 3) {
@@ -137,6 +140,7 @@ export const useYhdm = (animeDetail: Bangumi.AnimeDeatilItem | null) => {
       }
     });
   });
+
   const otherSite = computed(() => {
     return sites.filter((item: any) => {
       if (item.lang) {

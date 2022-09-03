@@ -57,7 +57,7 @@ useAnimeCalendar().then((list: Bangumi.CalendarItem[]) => {
     for (let i = 0; todayList.value.length < 10; i++) {
       let year = new Date().getFullYear();
       // 看一下开播日期 如果不是今年（-1年）的直接扔掉
-      if (Math.abs(parseInt(res[i].airDate.split('-')[0]) - year) > 1) {
+      if (Math.abs(parseInt(res[i].air_date.split('-')[0]) - year) > 1) {
         continue;
       }
       todayList.value.push(res[i]);

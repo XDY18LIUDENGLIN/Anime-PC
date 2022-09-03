@@ -16,6 +16,7 @@ const props = defineProps({
     default: ''
   }
 });
+
 const isM3u8 = computed(() => {
   let arr = props.videoUrl.split('.');
   if (arr[arr.length - 1] === 'm3u8') return true;
@@ -54,7 +55,7 @@ onMounted(() => {
   });
   dp.value.on('error', e => {
     console.log(e);
-    dp.value.pause();
+    // dp.value.pause();
     dp.value.notice('视频加载失败', 2000);
   });
   dp.value.container.addEventListener('mousemove', () => {
